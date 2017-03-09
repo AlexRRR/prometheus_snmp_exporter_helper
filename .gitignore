@@ -1,1 +1,3 @@
 snmp_exporter/
+generator.yml
+snmp.yml
