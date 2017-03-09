@@ -3,7 +3,7 @@ VERSION = latest
 
 directory = ./snmp_exporter
 
-all: | $(directory)
+all: build | $(directory)
 	@echo "Continuation regardless"
 	cd $(directory) && git pull
 $(directory):
