@@ -15,7 +15,9 @@ to build just:
 ## Usage
 
 ```sh
-docker run -ti -v $PWD/snmp.yml:/generator/snmp.yml -v $PWD/generator.yml:/generator/generator.yml -v $PWD/CISCO-6200-MIB:/generator/mibs/cisco.mib alex/snmp_exporter_generator:latest  generate```
+docker run -ti -v $PWD/snmp.yml:/generator/snmp.yml -v $PWD/generator.yml:/generator/generator.yml -v $PWD/CISCO-6200-MIB:/generator/mibs/cisco.mib alex/snmp_exporter_generator:latest  generate
+
+```
 
 1. create a `generator.yml` file in your host containing the OIDs that you would like the tool to walk and generate a config file and mount it as a volume to `/generator/generator.yml`
 2. create an empty `snmp.yml` file in your host where the generated configuration will be written, mount it in your container to `/generator/generator.yml`
