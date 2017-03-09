@@ -3,7 +3,7 @@
 Prometheus snmp_exporter helper
 ===============================
 
-This project creates a helper container with the awesome [generator](https://github.com/prometheus/snmp_exporter/blob/master/generator/README.md) tool from the the [prometheus/snmp_exporter] project. 
+This project creates a helper container with the awesome [generator](https://github.com/prometheus/snmp_exporter/blob/master/generator/README.md) tool from the the [prometheus/snmp_exporter](https://github.com/prometheus/snmp_exporter) project. 
 
 
 ## Build
@@ -17,7 +17,11 @@ make
 ## Usage
 
 ```
-docker run -ti -v $PWD/snmp.yml:/generator/snmp.yml -v $PWD/generator.yml:/generator/generator.yml -v $PWD/CISCO-6200-MIB:/generator/mibs/cisco.mib alex/snmp_exporter_generator:latest  generate
+docker run -ti \
+-v $PWD/snmp.yml:/generator/snmp.yml \
+-v $PWD/generator.yml:/generator/generator.yml \
+-v $PWD/CISCO-6200-MIB:/generator/mibs/cisco.mib \
+alex/snmp_exporter_generator:latest  generate
 ```
 
 1. create a `generator.yml` file in your host containing the OIDs that you would like the tool to walk and generate a config file and mount it as a volume to `/generator/generator.yml`
