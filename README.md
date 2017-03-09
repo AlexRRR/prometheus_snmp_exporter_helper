@@ -8,8 +8,10 @@ This project creates a helper container with the awesome [generator](https://git
 
 ## Build
 
-to build just: 
-```make```
+to build just execute: 
+```
+make
+```
 
 
 ## Usage
